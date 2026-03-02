@@ -20,11 +20,14 @@ Este projeto está totalmente "containerizado". Você só precisa ter o Docker i
    cd todo-fullstack
 
 2. **Suba os Containers**
+   ```bash
    docker-compose up --build
 
 3. **Prepare o banco para a primeira execução**
+   ```bash
    docker-compose exec backend rails db:prepare
 
-4. **Acesso no navegador**
+5. **Acesso no navegador**
+   ```bash
    Frontend: http://localhost:4000
    Backend API: http://localhost:3000/api/todos

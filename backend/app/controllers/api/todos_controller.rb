@@ -33,10 +33,18 @@ module Api
       end
     end
 
+    def update
+      @todo = Todo.find(params[:id])
+      if @todo.update(todo_params)
+        render json: @todo
+      else
+        render json: @todo.errors, status: :unprocessable_entity
+      end
+    end
+
     private
 
     def todo_params
-      # Garante que o Rails aceite os dados enviados pelo seu React
       params.require(:todo).permit(:todo_name, :completed)
     end
   end

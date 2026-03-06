@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,          // Essencial para migração gradual!
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,           // Comece rigoroso para evitar bugs
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,           // O Rails/esbuild/webpacker cuidará da emissão do código
+    "jsx": "react-jsx"
+  },
+  "include": ["src/components"] // Aponte para onde estão seus componentes React
+}
